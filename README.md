@@ -23,6 +23,18 @@ git branch --contains 047d6e5084767a2972f7da5b325213987354888b
 * mlainani/teco_mcast_storm_1732980_take_two
 ```
 
+- Fix the author in last commit message
+
+```
+git commit --amend --author="Madani Lainani <madani.lainani@itron.com>"
+```
+
+- Replace last commit on remote branch
+
+```
+git push --force
+```
+
 ## Branches
 
 - Create a remote branch
@@ -70,3 +82,32 @@ mlainani@mustang:~/deleteme/IOTR-FW$ git branch --all
   remotes/origin/HEAD -> origin/master
   remotes/origin/master
 ```
+
+kong@skullisland:~$ emacs ~/.gitconfig
+kong@skullisland:~$ git config --global --unset-all user.name
+kong@skullisland:~$ git config --global --unset-all user.
+user.email   user.mail
+kong@skullisland:~$ git config --global --unset-all user.email
+kong@skullisland:~$ git config --global --unset-all user.mail
+kong@skullisland:~$ git config --global --list
+
+
+
+ADD REMOTE BRANCH
+
+
+kong@skullisland:~/IOTR-FW$ git push --set-upstream origin test_branch
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.95 KiB | 667.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote: Storing packfile... done (70 ms)
+remote: Storing index... done (70 ms)
+To vs-ssh.visualstudio.com:v3/itron/RnD/IOTR-FW
+ * [new branch]      test_branch -> test_branch
+Branch 'test_branch' set up to track remote branch 'test_branch' from 'origin'.
+
+
+
