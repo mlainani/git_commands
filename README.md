@@ -7,6 +7,12 @@
 ```
 git config --local credential.helper ""
 ```
+## Undo a pull
+
+```
+git reset --hard development@{"7 days ago"}
+git update-ref refs/remotes/origin/development refs/remotes/origin/development@{1}
+```
 
 ## Commits
 
@@ -41,6 +47,30 @@ git push --force
 
 ```
 git push -u origin mlainani/teco_mcast_storm_1732980_take_two
+```
+
+- Create a remote branch from an existing local branch
+
+```
+git push --set-upstream origin mla_debug_strict_mode
+```
+
+- Delete a remote branch
+
+```
+git push -d origin mla_debug_strict_mode
+```
+
+- Delete a local branch
+
+```
+git branch -d mla_debug_strict_mode
+```
+
+or if force is needed (the branch is not fully merged)
+
+```
+git branch -D mla_debug_strict_mode
 ```
 
 ## ADS
